@@ -1,0 +1,31 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+input {
+  width: 80%;
+}
+.date {
+  font-family: "Roboto", sans-serif;
+  font-style: bolder;
+}
+#time {
+  font-family: "Roboto", sans-serif;
+  font-style: bolder;
+}
+h5,
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: bolder;
+}
+.card-text {
+  font-family: "Roboto", sans-serif;
+}
+#quote-of-the-day {
+  font-style: italic;
+  font-family: "Roboto", sans-serif;
+}
+
+
+/*# sourceMappingURL=/styles.dd855970.css.map */
