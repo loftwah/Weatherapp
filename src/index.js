@@ -76,4 +76,21 @@ function showWeatherIcon(icon) {
   const iconUrl = `http://openweathermap.org/img/wn/${iconCode}@2x.png`;
   weatherIcon.setAttribute("src", iconUrl);
 }
+function showWeatherDescription(description){
+  const WeatherDescription= document.getElementById("weather-description");
+  weatherDescription.innerText=
+  description;
+}
+function showTemperature(temperature){
+  const temperatureElement=
+  document.query.selector("h5");
+  const fahrenheitTemperature =
+  ((temperature -273.15) * 9/5) + 32;
+  temperatureElement.innerHTML = fahrenheitTemperature.toFixed(2) + "°F";
+}
+function showWindSpeed(speed) {
+  const speedElement = document.querySelector("wind-speed");
+  windSpeedElement.innerText=
+  windSpeed +"m/s";
+}
 form.addEventListener("submit", handleSubmit);

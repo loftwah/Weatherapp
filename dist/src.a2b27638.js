@@ -188,6 +188,19 @@ function showWeatherIcon(icon) {
   var iconUrl = "http://openweathermap.org/img/wn/".concat(iconCode, "@2x.png");
   weatherIcon.setAttribute("src", iconUrl);
 }
+function showWeatherDescription(description) {
+  var WeatherDescription = document.getElementById("weather-description");
+  weatherDescription.innerText = description;
+}
+function showTemperature(temperature) {
+  var temperatureElement = document.query.selector("h5");
+  var fahrenheitTemperature = (temperature - 273.15) * 9 / 5 + 32;
+  temperatureElement.innerHTML = fahrenheitTemperature.toFixed(2) + "°F";
+}
+function showWindSpeed(speed) {
+  var speedElement = document.querySelector("wind-speed");
+  windSpeedElement.innerText = windSpeed + "m/s";
+}
 form.addEventListener("submit", handleSubmit);
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
