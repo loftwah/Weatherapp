@@ -88,8 +88,8 @@ function showTemperature(temperature){
   ((temperature -273.15) * 9/5) + 32;
   temperatureElement.innerHTML = fahrenheitTemperature.toFixed(2) + "°F";
 }
-function showWindSpeed(speed) {
-  const speedElement = document.querySelector("wind-speed");
+function showWindSpeed(windspeed) {
+  const windspeedElement = document.getElementsByClassName("elements");
   windSpeedElement.innerText=
   windSpeed +"m/s";
 }

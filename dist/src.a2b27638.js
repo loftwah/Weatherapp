@@ -197,8 +197,8 @@ function showTemperature(temperature) {
   var fahrenheitTemperature = (temperature - 273.15) * 9 / 5 + 32;
   temperatureElement.innerHTML = fahrenheitTemperature.toFixed(2) + "°F";
 }
-function showWindSpeed(speed) {
-  var speedElement = document.querySelector("wind-speed");
+function showWindSpeed(windspeed) {
+  var windspeedElement = document.getElementsByClassName("elements");
   windSpeedElement.innerText = windSpeed + "m/s";
 }
 form.addEventListener("submit", handleSubmit);
