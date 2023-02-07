@@ -57,8 +57,9 @@ function searchCity(city) {
   axios.get(apiUrl).then((res) => {
     showTemperature(res.data.main.temp);
     showCityName(res.data.name);
+     showWeatherIcon(res.data.weather[0].icon);
   });
-  showWeatherIcon(res.data.weather[0].icon);
+ 
 }
 
 function showTemperature(temperature) {
