@@ -173,6 +173,7 @@ function searchCity(city) {
     showTemperature(res.data.main.temp);
     showCityName(res.data.name);
   });
+  showWeatherIcon(res.data.weather[0].icon);
 }
 function showTemperature(temperature) {
   var temperatureElement = document.querySelector("h5");
@@ -181,6 +182,10 @@ function showTemperature(temperature) {
 function showCityName(cityName) {
   var cityNameElement = document.getElementById("city-name");
   cityNameElement.innerText = cityName;
+}
+function showWeatherIcon(iconCode) {
+  var iconUrl = "http://openweathermap.org/img/wn/".concat(iconCode, "@2x.png");
+  weatherIcon.setAttribute("src", iconUrl);
 }
 form.addEventListener("submit", handleSubmit);
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -208,7 +213,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "46529" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36235" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

@@ -58,6 +58,7 @@ function searchCity(city) {
     showTemperature(res.data.main.temp);
     showCityName(res.data.name);
   });
+  showWeatherIcon(res.data.weather[0].icon);
 }
 
 function showTemperature(temperature) {
@@ -69,5 +70,8 @@ function showCityName(cityName) {
   const cityNameElement = document.getElementById("city-name");
   cityNameElement.innerText = cityName;
 }
-
+function showWeatherIcon(iconCode) {
+  const iconUrl = `http://openweathermap.org/img/wn/${iconCode}@2x.png`;
+  weatherIcon.setAttribute("src", iconUrl);
+}
 form.addEventListener("submit", handleSubmit);
