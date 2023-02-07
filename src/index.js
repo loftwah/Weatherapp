@@ -57,8 +57,9 @@ function searchCity(city) {
   axios.get(apiUrl).then((res) => {
     showTemperature(res.data.main.temp);
     showCityName(res.data.name);
+     showWeatherIcon(res.data.weather[0].icon);
   });
-  showWeatherIcon(res.data.weather[0].icon);
+ 
 }
 
 function showTemperature(temperature) {
@@ -70,7 +71,8 @@ function showCityName(cityName) {
   const cityNameElement = document.getElementById("city-name");
   cityNameElement.innerText = cityName;
 }
-function showWeatherIcon(iconCode) {
+function showWeatherIcon(icon) {
+  const iconElement= document.querySelector("img");
   const iconUrl = `http://openweathermap.org/img/wn/${iconCode}@2x.png`;
   weatherIcon.setAttribute("src", iconUrl);
 }

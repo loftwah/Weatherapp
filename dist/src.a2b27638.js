@@ -172,8 +172,8 @@ function searchCity(city) {
   axios.get(apiUrl).then(function (res) {
     showTemperature(res.data.main.temp);
     showCityName(res.data.name);
+    showWeatherIcon(res.data.weather[0].icon);
   });
-  showWeatherIcon(res.data.weather[0].icon);
 }
 function showTemperature(temperature) {
   var temperatureElement = document.querySelector("h5");
@@ -183,7 +183,8 @@ function showCityName(cityName) {
   var cityNameElement = document.getElementById("city-name");
   cityNameElement.innerText = cityName;
 }
-function showWeatherIcon(iconCode) {
+function showWeatherIcon(icon) {
+  var iconElement = document.querySelector("img");
   var iconUrl = "http://openweathermap.org/img/wn/".concat(iconCode, "@2x.png");
   weatherIcon.setAttribute("src", iconUrl);
 }
