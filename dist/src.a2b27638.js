@@ -183,7 +183,8 @@ function showCityName(cityName) {
   var cityNameElement = document.getElementById("city-name");
   cityNameElement.innerText = cityName;
 }
-function showWeatherIcon(iconCode) {
+function showWeatherIcon(icon) {
+  var iconElement = document.querySelector("img");
   var iconUrl = "http://openweathermap.org/img/wn/".concat(iconCode, "@2x.png");
   weatherIcon.setAttribute("src", iconUrl);
 }
